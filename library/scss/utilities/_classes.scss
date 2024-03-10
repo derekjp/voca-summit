@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Reuseable Classes
+   ========================================================================== */
+ul.clean,
+ol.clean{
+  list-style: none;
+  margin-left: 0;
+  li{
+    padding-left: 0;
+  }
+}
+
+.float-left{
+	float: left !important;
+}
+.float-right{
+	float: right !important;
+}
+.clear-both{
+	clear: both;
+}
+
+.row{
+  @include row(12);
+}
+// Flexbox general classes for even responsive sections
+
+.flex-container{
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  position: relative;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+  .flex-item{
+    @include flex-grow(0);
+    position: relative;
+  }
+
+// // From the Grid
+//   -- Use this wrapper if you want to divide your columns --
+	
+.divide-bottom {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em; }
+
+// -- Use this wrapper if you want to block-out a column with padding 
+// Taken from http://csswizardry.com/2011/10/the-island-object/) --
+
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+ // start commented backslash hack \
+html .clearfix { height: 1%; }
+.clearfix { display: block; }
+// close commented backslash hack

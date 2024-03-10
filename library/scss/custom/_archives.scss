@@ -1,0 +1,91 @@
+// /* ==========================================================================
+//    Archives Page
+//    ========================================================================== */
+// .archive-body, .home-body, .blog-body{
+//   @include row(12);
+//   @include flexbox;
+//   @include flex-direction(row);
+//   @include flex-wrap(wrap);
+//   .past-issue{
+//     margin-bottom: $base-margin*4 !important;
+//     .entry-title{
+//       font-family: $font-stack-serif;
+//     }
+//   }
+// 	.article, .past-issue{
+//     transition: all .15s cubic-bezier(.33,.66,.66,1);
+//     position: relative;
+//     text-align: center;
+//     @include column(12);
+//     margin-bottom: $base-margin*4;
+//     @media (min-width: $bp-small){
+// 		  @include column(8);
+//       @include push(2);
+//       margin-bottom: $base-margin*4;
+//     }
+//     @media (min-width: $bp-large){
+//       @include column(6);
+//       margin-bottom: $base-margin*4;
+//     }
+//     img{
+//       -webkit-transform: translate3d(0, 0, 0);
+//       transform: translate3d(0, 0, 0);
+//       transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+//     }
+//     &:hover, &:focus{
+//       // transform: translate3d(0,-3px,0);
+//       // opacity: 0.85;
+//       img{
+//          -webkit-transform: scale(1.025) translate3d(0, 0, 0);
+//         transform: scale(1.025) translate3d(0, 0, 0);
+//         transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+//       }
+//       .main-title{
+//         display: inline;
+//         margin: 0;
+//         padding: 0;
+//         background-repeat: no-repeat;
+//         background-position: center bottom 3px;
+//         background-size: 100% 3px;
+//         background-image: linear-gradient(
+//           to right,
+//           $teal,
+//           $teal
+//         );
+//         box-decoration-break: clone;
+//         -webkit-box-decoration-break: clone;
+//         -moz-background-inline-policy: each-box;
+//         &.serif{
+//           background-position: center bottom 0px;
+//         }
+//       }
+//       h2, .author-by, .author-name{
+//         color: $black;
+//         text-decoration: none;
+//       }
+//
+//     }
+//     a{
+//       text-decoration: none;
+//     }
+// 	}
+//
+// 	h1{
+//     margin-top: -$base-margin;
+//     //margin-bottom: 0;
+//     z-index: 1;
+//     position: relative;
+//   }
+//   .issue-thumb-title{
+//         text-transform: uppercase;
+//     }
+//     .author-name{
+//         font-size: 15px !important;
+//     }
+//
+// }
+//
+// .archives-title{
+//   text-align: center;
+//   margin-bottom: $base-margin*2;
+// }

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Issue Template Page
+   ========================================================================== */
+.issue-title{
+    background: #fff;
+    position: relative;
+    width: 200px;
+    margin: -$base-margin*2 auto 0;
+    padding: 32px 0;
+
+    @media (min-width: $bp-small){
+    	width: 300px;
+    }
+    @media (min-width: $bp-medium){
+    	width: 350px;
+    	margin: -$base-margin*3 auto 0;
+    }
+    .line{
+        width: 40%;
+        margin: 0 auto;
+        height: 3px;
+        background: $black;
+        position: relative;
+        display: block;
+
+    }
+    h1{
+        text-transform: none !important;
+        padding: 20px 0;
+        margin: 0;
+        font-family: $font-stack-mono;
+        font-size: 25px !important;
+        line-height: 1.125 !important;
+        @media (min-width: $bp-small){
+        	font-size: 32px !important;
+        }
+        @media (min-width: $bp-medium){
+        	font-size: 46px !important;
+        }
+    }
+}
+
+.editor-letter{
+	margin-bottom: $base-margin;
+	text-align: center;
+}
+
+.entry-title{
+	margin-bottom: 0;
+    .sub{
+        font-size: 20px;
+        text-transform: none;
+    }
+}
+.author-by{
+	font-weight: bold;
+	text-align: center;
+	display: block;
+}
+.author-name{
+	margin: $base-margin/2 0;
+	text-align: center;
+	display: block;
+}
+
+//Hero Image
+//1140 x 700
+.issue-hero, .article-hero{
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 66.5%;
+	img{
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+//Article/Past Issue Image
+//530x360
+.issue-thumb, .archives-thumb{
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 66.5%;
+	background: #f1f1f1;
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+        width: 100%;
+	}
+
+}

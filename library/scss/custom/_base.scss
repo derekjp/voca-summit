@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Base (Custom)
+   ========================================================================== */
+
+//Structural
+html{
+  overflow-x: hidden;
+  background: #fff;
+}
+body{
+  min-width: 250px;
+  overflow-x: hidden;
+}
+.container, .contained{
+  max-width: 1600px;
+}
+
+main#main{
+  display: inline-block;
+  margin-bottom: $base-margin*2;
+  @include column(12);
+}
+
+
+.container, .contained{
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+  @media(min-width: $bp-medium){
+    width: 90%;
+  }
+  @media(min-width: $bp-large){
+    width: 85%;
+  }
+  &:before{
+    content: "";
+    display: table;
+  }
+  &:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    //height: 0;
+  }
+  &.relative{
+    position: relative; //to keep absolute things in this container
+  }
+}
+
+
+.main-body{
+  @include column(12);
+  margin-top: $base-margin;
+  @media(min-width: $bp-medium){
+    @include column(8);
+    margin-top: $base-margin*2;
+  }
+}
+.side-column{
+  @include column(12);
+  margin-top: $base-margin;
+  @media(min-width: $bp-medium){
+    @include column(4);
+    margin-top: $base-margin*2;
+  }
+}
+
+.page-title{
+  margin-top: 0;
+}
+
+.more-link:after{
+  content: "\f301";
+  font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  padding-left: 5px;
+  transition: transform 200ms ease-in-out;
+}
+.more-link:hover:after{
+  transform: translateX(10px);
+}
+
+
+//A reuseable grid
+.grid-half{
+  @include column(12);
+  @media (min-width: $bp-medium){
+    @include column(6);
+  }
+}

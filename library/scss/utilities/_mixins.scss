@@ -1,0 +1,72 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+//Example:
+//.box { 
+//  @include border-radius(10px); 
+//}
+
+
+
+@mixin transition($what, $speed, $type) {
+	-webkit-transition: $what $speed $type;
+	   -moz-transition: $what $speed $type;
+	     -o-transition: $what $speed $type;
+	        transition: $what $speed $type;
+}
+//Example:
+//.box {
+//  @include transition(background-color, 500ms, ease-out)
+//}
+
+
+
+@mixin shadow($horizontal, $vertical, $blur, $spread, $color) {
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+     -moz-box-shadow: $horizontal $vertical $blur $spread $color;
+          box-shadow: $horizontal $vertical $blur $spread $color;
+}
+//Example:
+//.box {
+//  @include shadow(1px, 1px, 1px, 1px, rgba(0,0,0,0.5));
+//}
+
+
+//Centering (http://css-tricks.com/snippets/sass/centering-mixin/)
+@mixin fully-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//Example:
+//.parent {
+//  position: relative;
+//}
+//.child {
+//  @include fully-centerer;
+//}
+
+
+@mixin vertically-centered{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+//Example:
+//.parent {
+//  position: relative;
+//}
+//.child {
+//  @include vertical-centered;
+//}
+
+
+
+
+
+

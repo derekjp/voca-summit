@@ -1,0 +1,67 @@
+/*//Normalize Corrections//////////////////////// */
+img{
+  max-width: 100%;
+}
+span.block{
+  display: block;
+}
+//Blockquotes
+blockquote{
+  border-left: 5px solid #ccc;
+  padding-left: 1em;
+  font-style: italic;
+  line-height: 1.5;
+}
+//Code
+code, pre{
+  background: #eee;
+}
+pre{
+  padding: 0.5em;
+}
+
+//Tables
+table{
+  width: 100%;
+}
+table caption{
+  padding: 0.5em;
+}
+table td, table th{
+  text-align: center;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+}
+
+//Lists
+// ul li, ol li, dl dt{
+//   padding-bottom: 0.25em;
+// }
+// dl dd{
+//   padding-bottom: 0.5em;
+// }
+
+//Forms
+form{
+  margin-bottom: 1em;
+}
+input[type="checkbox"], input[type="radio"]{
+  margin-bottom: 0.5em !important;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="number"],
+input[type="datalist"],
+input[type="time"],
+input[type="date"],
+input[type="tel"],
+textarea,{
+  padding: 8px;
+}
+
+textarea#text_area_disabled{
+  color: gray;
+}

@@ -1,0 +1,170 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+
+
+/* Footer Styles */
+footer.footer{
+	@include row(12);
+	font-family: $font-stack-mono;
+	// text-transform: uppercase;
+	//background: $gray;
+
+	#pre-footer{
+		@include column(12);
+		border-top: 3px solid $black;
+		padding: $base-margin*2 0;
+		font-size: 12px;
+		line-height: 18px;
+		@media (min-width: $bp-menu-shift){
+			border-top: 3px solid $black;
+			border-bottom: 0px;
+		}
+		p{
+			margin: 0;
+		}
+		.left-pre-footer{
+			@include column(12);
+			text-align: center;
+			margin-bottom: $base-margin*2;
+			@media (min-width: $bp-small){
+				@include column(10);
+				@include push(1);
+				margin-bottom: $base-margin*2;
+			}
+			@media (min-width: $bp-medium){
+				@include column(4);
+				text-align: left;
+			}
+			@media (min-width: $bp-large){
+				@include column(3);
+				text-align: left;
+			}
+		}
+		.center-pre-footer{
+			@include column(12);
+			text-align: center;
+			margin-bottom: $base-margin*2;
+			@media (min-width: $bp-small){
+				@include column(10);
+				@include push(1);
+				margin-bottom: $base-margin*2;
+			}
+			@media (min-width: $bp-medium){
+				@include column(4);
+				text-align: left;
+			}
+			@media (min-width: $bp-large){
+				@include column(3);
+				@include push(1.5);
+				text-align: left;
+			}
+		}
+		.right-pre-footer{
+			@include column(12);
+			text-align: center;
+			@media (min-width: $bp-small){
+				@include column(10);
+				@include push(1);
+			}
+			@media (min-width: $bp-medium){
+				@include column(4);
+				text-align: left;
+			}
+			@media (min-width: $bp-large){
+				@include column(3);
+				@include push(1.5);
+				text-align: left;
+			}
+		}
+
+		.pre-footer--title{
+			font-family: 'League Spartan', $font-stack-sans;
+			font-size: 11px;
+			line-height: 1.25;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-top: 0;
+			margin-bottom: $base-margin/2;
+			.lowercase{
+				text-transform: none !important;
+			}
+		}
+	}
+
+	#inner-footer{
+		@include column(12);
+		border-top: 3px solid $black;
+		border-bottom: 3px solid $black;
+		padding-top: $base-margin;
+		@media (min-width: $bp-menu-shift){
+			border-top: 3px solid $black;
+			border-bottom: 0px;
+		}
+		.left-footer{
+			@include column(12);
+			text-align: center;
+			@media (min-width: $bp-medium){
+				@include column(6);
+				text-align: left;
+			}
+			.copyright{
+				font-size: 9px;
+			}
+		}
+		.right-footer{
+			@include column(12);
+			//margin-bottom: $base-margin;
+			@media (min-width: $bp-medium){
+				@include column(6);
+			}
+			ul{
+				list-style: none;
+				text-align: center;
+				margin-left: 0;
+				@media (min-width: $bp-medium){
+					text-align: right;
+				}
+			}
+			li{
+				display: inline-block;
+				width: calc(100% / 6);
+				text-align: center;
+				@media (min-width: $bp-medium){
+					width: auto;
+				}
+			}
+			i{
+				font-size: 20px;
+			}
+			a, a:visited{
+				border-bottom: 0;
+				display: block;
+				width: 26px;
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+	}
+
+
+}
+
+.to-top{
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.top-link{
+	font-family: $font-stack-sans;
+	display: inline-block;
+	margin-bottom: $base-margin;
+	text-decoration: none;
+	letter-spacing: 1px;
+	padding: $base-margin;
+
+	@media (min-width: $bp-menu-shift){
+		display: none;
+	}
+}

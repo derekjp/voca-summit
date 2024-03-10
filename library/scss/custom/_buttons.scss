@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+	display: inline-block;
+	padding: $base-margin $base-margin;
+	line-height: 1.2;
+	font-weight: normal;
+	background-color: $primary-button-color;
+	border: 3px solid $black;
+	border-radius: 0;
+	margin-bottom: 0;
+	color: $black;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: background-color 200ms linear;
+}
+
+.btn:hover,
+a .btn:hover,
+.btn.active {
+	background-color: $button-hover-color;
+	border-color: $button-hover-color;
+	text-decoration: none;
+	border: 3px solid $black;
+}
+
+.btn-primary{
+	color: $primary-text-color;
+}
+.btn-secondary {
+	background-color: $secondary-button-color;
+	border-color: $secondary-button-color;
+	color: $light-text-color;
+}
+
+.btn-secondary:hover,
+a .btn-secondary:hover,
+.btn-secondary.active {
+	background-color: darken( $secondary-button-color, 15% );
+	border-color: darken( $secondary-button-color, 15% );
+}
+
+.btn:active,
+.btn.active {
+	//box-shadow: inset 0 calc-em(2.5px) calc-em(4px) rgba(0, 0, 0, 0.15), 0 calc-em(1px) calc-em(2.5px) rgba(0, 0, 0, 0.05);
+	outline: 0;
+}
+
+.btn.disabled,
+.btn[disabled] {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+    box-shadow: none;
+}
+
+.btn-large {
+	padding: 0.75em 2em;
+	font-size: 1em;
+	line-height: normal;
+}
+
+.btn-full {
+	padding: 0.75em 2em;
+	font-size: 1em;
+	line-height: normal;
+	width: 100%;
+}
+
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+	display: block;
+	width: 100%;
+	margin-right: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+button,
+.btn {
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	/* Override default Webkit/Firefox button styling */
+	background-image: none;
+	-webkit-appearance: none;
+}
+
+.btn:last-child,
+input.btn {
+	margin-right: 0;
+}
+
+
+//Shadow Button
+$button-border: $black;
+$button-shadow-color: $teal;
+
+.btn-shadow {
+  border: 5px solid $button-border;
+  color: $black;
+  display: inline-block;
+  font-family: $font-stack-sans;
+  font-size: 20px;
+  padding: 18px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+.btn-shadow:hover{
+	text-decoration: none;
+	color: $black;
+}
+.btn-shadow::before {
+  content: "";
+  background-color: $button-shadow-color;
+  position: absolute;
+  left: -12px;
+  top: 10px;
+  height: 60px;
+  width: 102%;
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+.btn-shadow:hover::before {
+  left: 0;
+  top: 0;
+}

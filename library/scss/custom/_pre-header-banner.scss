@@ -1,0 +1,65 @@
+//Pre Header Banner
+.per-header-banner{
+  display: block;
+  position: relative;
+  z-index: 109;
+  background-color: $orange;
+  color: $light-text-color;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+  @media (min-width: $bp-small){
+    padding: 0.75rem 1rem;
+  }
+  &.orange-banner{
+    background-color: $orange;
+  }
+  &.teal-banner{
+    background-color: $teal;
+  }
+  &.black-banner{
+    background-color: #231f20;
+  }
+  p{
+    margin: 0;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: bold;
+    letter-spacing: 0.42px;
+    @media (min-width: $bp-small){
+      font-size: 18px;
+    }
+  }
+  .per-header-banner--link{
+    display: inline-block;
+    position: relative;
+    margin-left: 12px;
+    a, a:visited{
+      color: $light-text-color;
+      font-family: $font-stack-mono;
+      display: block;
+      border-bottom: 0;
+      text-transform: uppercase;
+      font-size: 13px;
+      text-decoration: none;
+      @media (min-width: $bp-small){
+        font-size: 15px;
+      }
+      &:after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: $light-text-color;
+        transition: bottom 100ms ease-in;
+      }
+      &:hover, &:focus, &:active{
+        &:after{
+          bottom: 50%;
+        }
+      }
+    }
+  }
+}

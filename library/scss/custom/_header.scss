@@ -1,0 +1,263 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+header#header{
+		display: block;
+		position: relative;
+		@include row(12);
+		z-index: 20;
+    margin-top: $base-margin/2;
+		margin-bottom: $base-margin;
+		@media (min-width: $bp-menu-shift){
+			margin-top: $base-margin*2;
+		}
+}
+.pre-header,
+.header-main{
+	@include column(12);
+}
+
+
+//Header Main
+
+.header-main-inner{
+	@include row(12);
+	position: relative;
+	display: flex;
+	@media (min-width: $bp-menu-shift){
+		padding-top: $base-margin/2;
+		padding-bottom: $base-margin/2;
+	}
+}
+//Homepage Header
+.home-header{
+	.header-main-left{
+      @include column(3);
+      @media(min-width: $bp-menu-shift){
+         @include column(2);
+      }
+   }
+	.header-main-right{
+		text-align: right;
+		display: block;
+		position: relative;
+		@include column(3);
+		@include push(6);
+		@media(min-width: $bp-menu-shift){
+			@include column(6);
+			@include push(4);
+		}
+
+	}
+}
+
+
+
+//Internal Header
+.internal-header{
+	padding-bottom: 35px !important;
+	@media(min-width: $bp-medium){
+		padding-bottom: 37px !important;
+	}
+	@media(min-width: $bp-large){
+		padding-bottom: 58px !important;
+	}
+	.header-main-left{
+		@include column(3.5);
+		@media(min-width: $bp-menu-shift){
+			@include column(2);
+		}
+	}
+	.header-main-center{
+		@include column(5);
+		display: flex;
+		@media(min-width: $bp-menu-shift){
+			@include column(8);
+			// @include push(2);
+			// display: flex;
+			// position: fixed;
+			// left: 0;
+			// top: 55px;
+		}
+		// .internal-logo{
+		// 	max-width: 336px;
+		// }
+	}
+	.header-main-right{
+		display: block;
+		text-align: right;
+		position: relative;
+		@include column(3.5);
+		@media(min-width: $bp-menu-shift){
+			@include column(2);
+			// @include push(8);
+		}
+
+	}
+}
+
+
+
+//Logo
+.logo-container{
+	max-width: 400px;
+}
+/* ==========================================================================
+   Logo ("Summit")
+   ========================================================================== */
+
+   //Homepage "Summit"
+   .home-logo-area{
+   	@include column(12);
+   	text-align: center;
+   }
+   .home-logo-inner{
+      width: 80%;
+      margin: 0 auto;
+      z-index: 10;
+      position: relative;
+			margin-bottom: 20px;
+      // margin-bottom: -9%;
+      @media (min-width: $bp-small){
+         width: 70%;
+         //margin-bottom: -$base-margin;
+      }
+      @media (min-width: $bp-menu-shift){
+         width: 50%;
+         // margin-bottom: -6%;
+      }
+   }
+
+
+   //Internal "Summit"
+    .internal-logo{
+      width: 100%;
+      display: block;
+      z-index: 100;
+      position: relative;
+      @media (min-width: $bp-menu-shift){
+         width: 45%;
+         margin: 0 auto;
+      }
+
+      img{
+
+         position: absolute;
+		   bottom: 0;
+      	@media (min-width: $bp-menu-shift){
+      		position: relative;
+      	}
+      }
+      a{
+      	transition: all .15s cubic-bezier(.33,.66,.66,1);
+      }
+      a:hover, a:focus{
+      	opacity: 0.75;
+      }
+   }
+
+
+
+/* ==========================================================================
+   Logo ("VoCA")
+   ========================================================================== */
+   .logo-long{
+      display: none;
+      @media (min-width: $bp-menu-shift){
+         display: block;
+         margin-bottom: -10px;
+      }
+      a{
+      	transition: all .15s cubic-bezier(.33,.66,.66,1);
+      }
+      a:hover, a:focus{
+      	opacity: 0.75;
+      }
+   }
+   .logo-square{
+      display: block;
+      width: 60%;
+      @media (min-width: $bp-small){
+         width: 50%;
+      }
+      @media (min-width: $bp-menu-shift){
+         display: none;
+      }
+      a{
+      	transition: all .15s cubic-bezier(.33,.66,.66,1);
+      }
+      a:hover, a:focus{
+      	opacity: 0.75;
+      }
+   }
+
+
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+//
+  .header-main-right{
+    position: relative;
+    @media (min-width: $bp-menu-shift){
+       position: static !important;
+    }
+  	nav{
+  		position: absolute;
+  		bottom: 4px;
+  		right: 1.6666666667%;
+       width: 100%;
+  	}
+		nav ul{
+			margin: 0;
+			display: none;
+		}
+		nav li{
+			display: inline-block;
+      letter-spacing: 1px;
+		}
+		li{
+			padding: 0 $base-margin/2;
+		}
+		li:last-child{
+			border-right: 0;
+			padding-right: 0;
+		}
+		//MENU+ button
+    a, a:visited{
+			display: inline-block;
+			margin-top: 12px;
+			position: relative;
+			font-size: 12px;
+			letter-spacing: 2px;
+			font-family: $font-stack-mono;
+			text-transform: uppercase;
+			text-decoration: none;
+			@media (min-width: $bp-medium){
+				margin-top: 15px;
+				margin-bottom: 15px;
+				font-size: 14px;
+			}
+			@media (min-width: $bp-xlarge){
+				margin-top: 30px;
+				margin-bottom: 0;
+				font-size: 14px;
+			}
+		}
+
+	}
+
+	.no-touch .header-main-right{
+		a:hover, a:focus, a:active{
+     text-decoration: none;
+     color: $black;
+		 &:after{
+       content: "";
+       border-bottom: 2px solid $teal;
+       position: absolute;
+       bottom: -3px;
+       left: 0;
+       width: 100%;
+     }
+    }
+	}

@@ -1,0 +1,40 @@
+//Speakers
+
+#speakers-list{
+  h2,h3,h4,h5,h6{
+    font-size: 16px !important;
+    line-height: 1.375 !important;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 6px;
+    @media (min-width: $bp-small){
+      font-size: 18px !important;
+    }
+    @media (min-width: $bp-xlarge){
+      font-size: 25px !important;
+    }
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+// .no-touch #speakers-list{
+//   h2,h3,h4,h5,h6{
+//     a:hover, a:focus, a:active{
+//       &:after{
+//         content: "";
+//         border-bottom: 2px solid $teal;
+//         position: absolute;
+//         bottom: -3px;
+//         left: 0;
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+.speakers-bio{
+  padding-top: $base-margin;
+  margin-top: 0;
+}

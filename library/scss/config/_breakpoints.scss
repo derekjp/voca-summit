@@ -1,0 +1,14 @@
+// Breakpoints
+$bp-xsmall: 400px;
+$bp-small: 480px;
+$bp-sm-medium: 640px;
+$bp-medium: 760px;
+$bp-large: 920px;
+$bp-xlarge: 1200px;
+$bp-huge: 1400px;
+$bp-xhuge: 1500px;
+$bp-super: 1700px;
+$bp-xsuper: 1900px;
+
+//One awesome breakpoint for when the menu goes from mobile to desktop
+$bp-menu-shift: $bp-medium;

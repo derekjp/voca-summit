@@ -1,0 +1,79 @@
+/* ==========================================================================
+   forms
+   ========================================================================== */
+.link-underline{
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 3px solid $teal;
+  box-shadow: inset 0 -5px 0 $teal;
+  transition: box-shadow .15s cubic-bezier(.33,.66,.66,1);
+  &:hover, &:focus, &:active{
+    box-shadow: inset 0 -9px 0 $teal;
+    border-bottom: 3px solid #4e9398;
+  }
+}
+
+
+
+
+
+.hidden, .screen-reader-text, .by{
+	position: absolute;
+	left: -9999em;
+}
+
+
+
+
+
+//Form Overrides
+form{
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  input{
+    display: block;
+    margin-bottom: $base-margin;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="search"],
+  input[type="submit"],
+  input[type="url"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datalist"],
+  textarea{
+    border: 2px solid $teal;
+    box-shadow: none;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0;
+    -webkit-appearance: none !important;
+    box-sizing: border-box;
+  }
+ textarea#comment{
+  width: 100%;
+  @media(min-width: $bp-sm-medium){
+    width: inherit;
+  }/*/mediaquery*/
+}
+.button, #searchsubmit, .form-submit input[name="submit"], .top-link, input[type="submit"]{
+
+      background: rgba(0,0,0,0);
+
+  }
+
+
+
+
+
+  form{
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }

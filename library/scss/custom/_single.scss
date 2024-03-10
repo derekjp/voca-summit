@@ -1,0 +1,364 @@
+/* ==========================================================================
+   Single.php Page, Article Page & About Page
+   ========================================================================== */
+
+ .summit-page-hero{
+     width: 100%;
+     float: left;
+     display: block;
+     position: relative;
+     margin-bottom: $base-margin*3;
+     .summit-page-hero--no-image{
+       padding-bottom: 90px;
+     }
+     .summit-page-hero--image{
+     	overflow: hidden;
+     	position: relative;
+     	padding-bottom: 44.308231%;
+      background: #f5f5f5;
+     	img{
+     		position: absolute;
+     		top: 0;
+     		width: 100%;
+     	}
+      .hero-vid{
+        position: absolute;
+       left: 0;
+       top: 0;
+       width: 100%;
+       min-height: 100%;
+      }
+   }
+   .summit-page-hero--video{
+
+
+   }
+ }
+ .summit-page-header{
+	 width: 100%;
+	 float: left;
+	 text-align: center;
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+ }
+ .summit-page-hero--title{
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    padding: 10px 23px 0px;
+    @media(min-width: $bp-medium){
+      padding: 20px 45px 12px;
+    }
+    h1{
+      padding: 0;
+      margin: 0;
+      font-family: $font-stack-mono;
+      font-size: 25px !important;
+      line-height: 1.375 !important;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 6px;
+      @media (min-width: $bp-small){
+        font-size: 32px !important;
+      }
+      @media (min-width: $bp-medium){
+        font-size: 40px !important;
+      }
+    }
+ }
+
+ .back-to-home-button{
+   width: 100%;
+   float: left;
+	 text-align: center;
+   a, a:visited{
+		 display: inline-block;
+		 position: relative;
+		 cursor: pointer;
+		 font-family: $font-stack-mono;
+		 font-size: 15px;
+		 line-height: 18px;
+		 letter-spacing: 2px;
+		 font-weight: bold;
+		 color: $teal;
+		 text-transform: uppercase;
+		 text-decoration: none;
+		 &:after{
+			 content: "";
+			 border-bottom: 2px solid $black;
+			 position: absolute;
+			 bottom: -3px;
+			 left: 0;
+			 width: 100%;
+       transition: bottom 50ms ease-in-out;
+		 }
+		 &:hover, &:focus, &:active{
+			 &:after{
+				 bottom: 8px;
+			 }
+		 }
+	 }
+ }
+
+
+
+.article-header{
+	.page-title{
+		text-align: center;
+		font-size: 16px;
+		font-family: $font-stack-sans;
+		text-decoration: underline;
+		font-weight: normal;
+		letter-spacing: 1.2px;
+		text-transform: none;
+		display: block;
+	}
+	a{
+		text-decoration: none;
+	}
+}
+.article-content,
+.about-page{
+  @include column(12);
+  .article-body{
+    @include column(11);
+    @include push(0.5);
+    @media (min-width: $bp-medium){
+      @include column(10.5);
+      @include push(0.75);
+    }
+    @media (min-width: $bp-large){
+      @include column(9);
+      @include push(1.5);
+    }
+  }
+}
+.article-body{
+	margin-bottom: $base-margin*4 !important;
+}
+.page-body{
+	margin-bottom: $base-margin*4 !important;
+}
+.article-body, .page-body{
+	.intro-section{
+		padding: $base-margin*2 0;
+		@media (min-width: $bp-medium){
+			padding: $base-margin*4 0;
+		}
+	}
+	.intro-paragraph{
+		padding: $base-margin 0;
+		font-size: 18px;
+		line-height: 1.4;
+		text-align: center;
+		@media (min-width: $bp-small){
+			font-size: 20px;
+		}
+		@media (min-width: $bp-medium){
+			font-size: 22px;
+		}
+		@media (min-width: $bp-large){
+			font-size: 24px;
+		}
+	}
+	.line{
+        width: 25%;
+        margin: 0 auto;
+        height: 3px;
+        background: $black;
+        position: relative;
+        display: block;
+    }
+	// h1.entry-title.single-title{
+	// 	font-size: 38px;
+	// 	line-height: 1.24137931;
+	// 	text-transform: uppercase;
+	// 	@media (min-width: $bp-small){
+	// 		font-size: 58px;
+	// 	}
+	// }
+	// h1{
+	// 	text-transform: uppercase;
+	// }
+	.sub_title{
+		font-size: 28px;
+		line-height: 1.28571429;
+		text-transform: none;
+
+	}
+	.author-by{
+		font-size: 14px;
+		line-height: 18px;
+		font-style: italic;
+		font-weight: 300;
+	}
+	.author-name{
+		font-size: 20px;
+		line-height: 1.3;
+	}
+	blockquote {
+		transition: all 200ms linear;
+		padding-left: 0;
+		border-left: 0;
+		display: block;
+		font-size: 20px;
+		line-height: 1.3;
+		font-family: $font-stack-sans;
+		text-transform: uppercase;
+		text-align: center;
+		@media (min-width: $bp-medium){
+			@include column(12);
+			font-size: 36px;
+		}
+		@media (min-width: $bp-large){
+
+			font-size: 56px;
+		}
+		&:before{
+			height: 3px;
+			border-bottom: 3px solid $black;
+			width: 25%;
+			content: '';
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		&:after{
+			height: 3px;
+			border-top: 3px solid $black;
+			width: 25%;
+			content: '';
+			display: inline-block;
+			vertical-align: top;
+		}
+		p{
+			margin: 50px 0;
+		}
+	}
+
+}
+
+.about_author{
+	border-top: 3px solid $black;
+	padding: $base-margin 0;
+
+	.author-text{
+		@include column(12);
+		.author-author{
+			//font-family: $font-stack-sans;
+			font-size: 18px;
+			line-height: 22px;
+			margin: 0;
+		}
+		.about-text{
+			font-size: 14px;
+			line-height: 26px;
+			margin-top: $base-margin/2;
+		}
+	}
+}
+
+.footnote{
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: $base-margin/2;
+	margin-bottom: $base-margin/2;
+}
+
+.issue-image-credit{
+	@include column(12);
+	padding: $base-margin 0;
+	margin-bottom: 0 !important;
+	@media(min-width: $bp-medium){
+		@include column(6);
+	}
+	.author-text{
+		@include column(12);
+		color: $gray;
+		.about-text{
+			font-size: 14px;
+			line-height: 26px;
+			margin-top: $base-margin/2;
+		}
+	}
+}
+//Body Parts
+
+
+.wp-caption, .wp-caption-text{
+	font-size: 14px;
+	line-height: 18px;
+	color: $gray;
+	//font-style: italic;
+	margin-top: $base-margin/2;
+}
+.wp-caption.aligncenter, .aligncenter, img.aligncenter{
+	float: none;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: $base-margin;
+	display: block;
+	.wp-caption-text{
+		text-align: left;
+	}
+}
+.wp-caption.alignleft, .alignleft, .left-offset, img.left{
+	@include column(12);
+	margin-bottom: $base-margin;
+	@media (min-width: $bp-medium){
+		@include column(8.95);
+		@include push(-3);
+		margin-bottom: $base-margin;
+	}
+
+}
+.wp-caption.alignright, .alignright, .right-offset, img.right{
+	@include column(12);
+	margin-bottom: $base-margin;
+	@media (min-width: $bp-medium){
+		@include column(8.95);
+		@include pull(-3);
+		margin-bottom: $base-margin;
+	}
+}
+
+.tags{
+	font-weight: bold;
+}
+.tags, .tags a{
+	color: $teal;
+}
+.tags a{
+	font-style: italic;
+	text-decoration: none;
+	font-weight: normal;
+}
+.tags a:hover, .tags a:focus{
+	text-decoration: underline;
+}
+
+.pagination{
+	text-align: center;
+	.page-numbers{
+		display: inline-block;
+	}
+	.page-numbers li{
+		display: inline-block;
+		float: left;
+		padding: 0 $base-margin/2;
+	}
+}
+
+//Buttons
+.btn-shadow-container{
+	@include column(12);
+	margin-top: $base-margin*2; //counter the negative top of the button
+	margin-bottom: $base-margin;
+	text-align: center;
+}
+
+
+//Search Page
+.search-body{
+	margin: $base-margin*5 0;
+}
